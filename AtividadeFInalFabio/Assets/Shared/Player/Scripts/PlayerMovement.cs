@@ -1,18 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+namespace Shared.Player.Scripts
 {
-    // Start is called before the first frame update
-    void Start()
+    public class PlayerMovement : MonoBehaviour
     {
+        public float moveSpeed;
         
-    }
+        private float _verticalInput = 0f;
 
-    // Update is called once per frame
-    void Update()
-    {
+        private Rigidbody2D _rigidbody2D;
+
+        private void OnEnable()
+        {
+            _rigidbody2D = GetComponent<Rigidbody2D>();
+        }
+
+        void Start()
+        {
         
+        }
+
+        void Update()
+        {
+            _verticalInput = Input.GetAxis("Vertical");
+
+            _rigidbody2D.velocity = Vector2.up * (moveSpeed * _verticalInput);
+        }
     }
 }
