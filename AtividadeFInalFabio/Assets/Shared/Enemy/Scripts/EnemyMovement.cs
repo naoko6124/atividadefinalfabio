@@ -40,7 +40,7 @@ namespace Shared.Enemy.Scripts
 
             if (other.CompareTag("Player"))
             {
-                if (effectDamage) Instantiate(effectDamage, transform.position, Quaternion.identity);
+                if (effectDamage) Instantiate(effectDamage, other.transform.position, Quaternion.identity);
                 GameController.Instance.LoseLife();
                 Destroy(gameObject);
             }
