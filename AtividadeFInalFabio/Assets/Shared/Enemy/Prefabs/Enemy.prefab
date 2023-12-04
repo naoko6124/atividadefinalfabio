@@ -26,6 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4584378486669533159}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.0153, y: 3.0153, z: 3.0153}
@@ -33,7 +34,6 @@ Transform:
   m_Children:
   - {fileID: 8104867888528732539}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5110021143820205547
 MonoBehaviour:
@@ -50,6 +50,8 @@ MonoBehaviour:
   timer: 10
   speed: {x: -4, y: 0}
   points: 1
+  effectExplode: {fileID: 3229664743612737809, guid: 5a3efbf43a643a24da7d96ff6f65ff98, type: 3}
+  effectDamage: {fileID: 8173692337173585282, guid: 84ec228f96f825342b0f6524539e8835, type: 3}
 --- !u!61 &2682042648358889915
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,13 +148,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6647446245023287656}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4361299845877895903}
-  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7525338913643716338
 SpriteRenderer:
