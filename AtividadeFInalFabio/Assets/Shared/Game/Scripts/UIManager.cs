@@ -1,29 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
+using UnityEngine;
 
-public class UIManager : MonoBehaviour
+namespace Shared.Game.Scripts
 {
-    public TMP_Text txtPoints;
-    public TMP_Text txtLife;
-
-
-    private void Start()
+    public class UIManager : MonoBehaviour
     {
-        txtPoints.text = "0";
+        public TMP_Text txtPoints;
+        public TMP_Text txtLife;
 
-        txtLife.text = "3";
-    }
 
-    public void ChangeScore(int points)
-    {
-        txtPoints.text = points.ToString();
-    }
+        private void Start()
+        {
+            txtPoints.text = "0";
 
-    public void ChangeVida(int life)
-    {
-        txtLife.text = life.ToString();
+            txtLife.text = "3";
+        }
+
+        public void ChangeScore(int points)
+        {
+            txtPoints.text = points.ToString();
+        }
+
+        public void ChangeVida(int life)
+        {
+            txtLife.text = life.ToString();
+        }
     }
 }

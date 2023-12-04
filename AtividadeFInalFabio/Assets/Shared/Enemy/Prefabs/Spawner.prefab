@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 1
-  range: 5
+  range: 3
   enemy: {fileID: 4584378486669533159, guid: 56f262dbdb1a62a48b61fc4e48700e82, type: 3}
