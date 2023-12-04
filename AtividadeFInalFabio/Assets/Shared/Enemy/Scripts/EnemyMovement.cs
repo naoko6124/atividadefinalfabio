@@ -10,6 +10,9 @@ namespace Shared.Enemy.Scripts
         public Vector2 speed;
         public int points;
 
+        public GameObject effectExplode;
+        public GameObject effectDamage;
+
         private Rigidbody2D _rigidbody2D;
 
         private void OnEnable()
@@ -30,12 +33,14 @@ namespace Shared.Enemy.Scripts
         {
             if (other.CompareTag("Bullet"))
             {
+                if (effectExplode) Instantiate(effectExplode, transform.position, Quaternion.identity);
                 GameController.Instance.points += points;
                 Destroy(gameObject);
             }
 
             if (other.CompareTag("Player"))
             {
+                if (effectDamage) Instantiate(effectDamage, transform.position, Quaternion.identity);
                 GameController.Instance.LoseLife();
                 Destroy(gameObject);
             }
