@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 10
-  speed: {x: 1, y: 0}
+  speed: {x: 4, y: 0}
 --- !u!61 &7706433854113583115
 BoxCollider2D:
   m_ObjectHideFlags: 0
