@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Shared.Game.Scripts
 {
@@ -22,7 +23,14 @@ namespace Shared.Game.Scripts
         {
             life--;
             if (life <= 0)
-                Debug.Log("GameOver");
+                SceneManager.LoadScene("GameOver");
+        }
+
+        public void AddPoint(int p)
+        {
+            points += p;
+            if (points > 5)
+                SceneManager.LoadScene("YouWin");
         }
     }
 }
