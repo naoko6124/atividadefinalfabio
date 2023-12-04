@@ -95,8 +95,8 @@ GameObject:
   - component: {fileID: 5451621579086502706}
   - component: {fileID: 4797332818319547022}
   - component: {fileID: 1499096524679006147}
-  - component: {fileID: 500542176479383835}
   - component: {fileID: 9197364954583133279}
+  - component: {fileID: 6461401616203555418}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -113,12 +113,12 @@ Transform:
   m_GameObject: {fileID: 5301165818592296295}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.46967, y: 0.46967, z: 0.46967}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6728688131062754516}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &4797332818319547022
 Rigidbody2D:
@@ -146,7 +146,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1499096524679006147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,8 +160,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
---- !u!61 &500542176479383835
-BoxCollider2D:
+--- !u!114 &9197364954583133279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5301165818592296295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dec9f9fdf7e19d4d95d10ab21a70dff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 3271976794831156939, guid: 2c439fd4fe6f1304f90666c95093094e, type: 3}
+  timerToShoot: 0.5
+--- !u!60 &6461401616203555418
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -202,20 +216,11 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &9197364954583133279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5301165818592296295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dec9f9fdf7e19d4d95d10ab21a70dff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 3271976794831156939, guid: 2c439fd4fe6f1304f90666c95093094e, type: 3}
-  timerToShoot: 0.5
+  m_Points:
+    m_Paths:
+    - - {x: -0.9261942, y: 1.7417167}
+      - {x: -0.97048455, y: 0.38672948}
+      - {x: -0.9763479, y: -0.4398827}
+      - {x: -0.9409169, y: -1.7743033}
+      - {x: 1.7281818, y: 0.017595261}
+  m_UseDelaunayMesh: 0
