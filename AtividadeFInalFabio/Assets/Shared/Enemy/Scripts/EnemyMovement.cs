@@ -1,4 +1,5 @@
 using System;
+using Shared.Game.Scripts;
 using UnityEngine;
 
 namespace Shared.Enemy.Scripts
@@ -7,6 +8,7 @@ namespace Shared.Enemy.Scripts
     {
         public float timer;
         public Vector2 speed;
+        public int points;
 
         private Rigidbody2D _rigidbody2D;
 
@@ -27,7 +29,16 @@ namespace Shared.Enemy.Scripts
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Bullet"))
+            {
+                GameController.Instance.points += points;
                 Destroy(gameObject);
+            }
+
+            if (other.CompareTag("Player"))
+            {
+                GameController.Instance.LoseLife();
+                Destroy(gameObject);
+            }
         }
     }
 }

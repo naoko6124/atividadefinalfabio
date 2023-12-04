@@ -17,5 +17,12 @@ namespace Shared.Game.Scripts
 
         public int life;
         public int points;
+
+        public void LoseLife()
+        {
+            life--;
+            if (life <= 0)
+                Debug.Log("GameOver");
+        }
     }
 }

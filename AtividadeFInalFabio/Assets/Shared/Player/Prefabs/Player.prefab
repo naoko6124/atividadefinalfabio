@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 9197364954583133279}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,3 +218,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3271976794831156939, guid: 2c439fd4fe6f1304f90666c95093094e, type: 3}
+  timerToShoot: 0.5
